@@ -1,0 +1,9 @@
+Date: 2024-04-22 05:26:22
+Potato: 174.0 kg
+Leek: 58.0 kg
+Vegetable broth: 290.0 kg
+Olive oil: 8.7 kg
+Salt: 2.9 kg
+Black pepper: 2.9 kg
+Oranges: 126.0 kg
+Grapefruit: 84.0 kg

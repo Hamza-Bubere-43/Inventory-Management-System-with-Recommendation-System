@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Orders</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Style the GUI buttons container */
+        .gui-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Style the table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px; /* Add margin top to the table */
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        td {
+            border: 1px solid #000;
+        }
+
+        /* Set a fixed width for the "items" column */
+        td.items {
+            width: 200px; /* You can adjust the width as needed */
+            border: 1.2px solid #8b8888;
+            /* Add any additional styles for the "items" column here */
+        }
+
+        /* Set a fixed width for the "total_cost" column */
+        td.total_cost {
+            width: 100px; /* Adjusted width for the third column */
+            border: 1.2px solid #8b8888;
+            /* Add any additional styles for the "total_cost" column here */
+        }
+
+        /* Style the mini-table */
+        .mini-table {
+            border-collapse: separate;
+            width: 100%;
+        }
+
+        .mini-table th, .mini-table td {
+            border: 2px solid #dddddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Billing Orders</h1>
+
+        <!-- Display GUI buttons -->
+        <div class="gui-buttons">
+            {% include 'gui_buttons.html' %}
+        </div>
+
+        <table>
+            <!-- Your table structure for billing_orders -->
+            <thead>
+                <!-- Table headers -->
+                <tr>
+                    <th>Items</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows -->
+                {% for order in data["billing_orders"] %}
+                    <tr>
+                        {% for key, value in order.items() %}
+                            {% if key != '_id' %}
+                                {% if key == 'items' %}
+                                    <td class="items">
+                                        {% if value %}
+                                            <table>
+                                                <tbody>
+                                                    {% for item in value %}
+                                                        <tr>
+                                                            {% for k, v in item.items() %}
+                                                                <td>{{ k }}</td>
+                                                                <td>{{ v }}</td>
+                                                            {% endfor %}
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        {% endif %}
+                                    </td>
+                                {% elif key == 'total_cost' %}
+                                    <td class="total_cost">{{ value }}</td>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+    </div>
+</body>
+</html>

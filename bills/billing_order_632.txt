@@ -1,0 +1,13 @@
+Date: 2024-04-23 05:54:57
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+potato leek soup     290.0      $1841.50   
+citrus salad         420.0      $1709.40   
+
+Total Cost:
+$3977.01
+
+Physical Address: Majiwada, Thane, Maharashtra
+Distance: 27.277 km

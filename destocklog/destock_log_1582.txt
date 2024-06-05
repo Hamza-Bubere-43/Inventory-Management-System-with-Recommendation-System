@@ -1,0 +1,22 @@
+Date: 2024-05-09 19:23:15
+Basil: 9.96 kg
+Pine nuts: 1.4939999999999998 kg
+Olive oil: 3.7349999999999994 kg
+Parmesan cheese: 2.49 kg
+Noodles: 3.2620000000000005 kg
+Sprouts: 6.99 kg
+Peanuts: 11.65 kg
+Sauce: 13.98 kg
+Pasta: 7.240000000000001 kg
+Mushroom: 5.430000000000001 kg
+Olive oil: 0.543 kg
+Parmesan cheese: 1.8100000000000003 kg
+Oranges: 4.29 kg
+Grapefruit: 2.8600000000000003 kg
+Black beans: 5.88 kg
+Tortillas: 117.6 kg
+Tomato: 5.88 kg
+Onion: 1.47 kg
+Cabbage: 10.85 kg
+Mayo: 13.02 kg
+Vinegar: 2.17 kg

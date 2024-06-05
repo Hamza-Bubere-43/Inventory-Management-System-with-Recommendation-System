@@ -1,0 +1,17 @@
+Date: 2024-05-12 00:10:38
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+zucchini noodles with pesto 24.9       $203.93    
+pad thai             23.3       $252.34    
+garlic mushroom pasta 18.1       $115.84    
+citrus salad         14.3       $58.20     
+black bean tacos     14.7       $2218.38   
+coleslaw             21.7       $150.38    
+
+Total Cost:
+$3358.96
+
+Physical Address: Jacob Circle, Mumbai, Maharashtra
+Distance: 13.126 km

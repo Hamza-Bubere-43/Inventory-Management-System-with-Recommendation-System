@@ -1,0 +1,14 @@
+Date: 2024-04-20 08:57:48
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+citrus salad         258.0      $1050.06   
+roasted carrot salad 189.0      $497.07    
+tomato basil pasta   102.0      $589.56    
+
+Total Cost:
+$2393.09
+
+Physical Address: Majiwada, Thane, Maharashtra
+Distance: 27.277 km

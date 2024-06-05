@@ -1,0 +1,17 @@
+Date: 2024-04-21 17:12:08
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+sweet potato black bean chili 19.7       $107.76    
+pasta primavera      10.4       $48.05     
+berry cobbler        14.9       $29.65     
+pesto pasta salad    11.1       $41.07     
+tuna salad           17.0       $123.59    
+fruit pizza          15.3       $138.92    
+
+Total Cost:
+$547.73
+
+Physical Address: Halivali, Karjat, Maharashtra
+Distance: 76.414 km

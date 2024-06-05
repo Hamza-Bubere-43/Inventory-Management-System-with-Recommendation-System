@@ -1,0 +1,14 @@
+Date: 2024-05-06 19:28:22
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+caprese salad        200.0      $2734.00   
+summer rolls         120.0      $928.80    
+veggie pasta         145.0      $1348.50   
+
+Total Cost:
+$5612.66
+
+Physical Address: Majiwada, Thane, Maharashtra
+Distance: 27.277 km

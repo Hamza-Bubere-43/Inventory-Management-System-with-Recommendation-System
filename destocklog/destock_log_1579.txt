@@ -1,0 +1,9 @@
+Date: 2024-04-28 16:03:11
+Mozzarella: 160.0 kg
+Basil: 140.0 kg
+Rice_Paper: 96.0 kg
+Plums: 48.0 kg
+Basil: 72.0 kg
+Bell_Peppers: 29.0 kg
+Basil: 72.5 kg
+Olive_Oil: 116.0 kg

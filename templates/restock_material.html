@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restock Material</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style the GUI buttons container */
+        .gui-buttons {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the form */
+        form {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        tfoot td {
+            text-align: center;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>Restock Material</h1>
+
+    <!-- Display GUI buttons -->
+    <div class="gui-buttons">
+        {% include 'gui_buttons.html' %}
+    </div>
+
+    <!-- Form for restocking material -->
+    <form id="restock-material-form" method="POST" action="{{ url_for('restock_material') }}">
+        {{ form.csrf_token }}
+        <table>
+            <thead>
+                <tr>
+                    <th>Material Name</th>
+                    <th>Amount (kg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through restock items from the session -->
+                {% for i, item in extracted_data %}
+                    <tr>
+                        <td>
+                            <select name="material_name[]">
+                                {% for material in material_inventory_data|sort(attribute=0) %}
+                                    <option value="{{ material[0] }}" {% if item.material_name == material[0] %}selected{% endif %}>
+                                        {{ material[0] }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td><input type="number" step="0.01" name="amount[]" placeholder="Amount (kg)"
+                                value="{{ item.amount }}"></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" onclick="addRow()">Add Row</button>
+                        <button type="submit">Restock Material</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+
+    <!-- Display material inventory data for reference -->
+    <div style="text-align: center;">
+        <h2>Material Inventory</h2>
+    </div>
+    
+    <div style="max-width: 600px; margin: 0 auto;">
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Material Name</th>
+                    <th>Current Amount (kg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for material in material_inventory_data|sort(attribute=0) %}
+                    {% if material[1] < 0 %}
+                        <tr>
+                            <td>{{ material[0] }}</td>
+                            <td>{{ material[1] }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    
+
+    <!-- Display the form errors, if any -->
+    {% if form.errors %}
+        <div style="color: red; text-align: center;">
+            {% for field, errors in form.errors.items() %}
+                <p>{{ field }}: {{ errors | join(', ') }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- JavaScript to add a new row to the table -->
+    <script>
+        function addRow() {
+            var table = document.getElementById("restock-material-form").getElementsByTagName('tbody')[0];
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+
+            // Modify the cell to include a dropdown menu
+            cell1.innerHTML = '<select name="material_name[]">' +
+                                '{% for material in material_inventory_data|sort(attribute=0) %}' +
+                                    '<option value="{{ material[0] }}">{{ material[0] }}</option>' +
+                                '{% endfor %}' +
+                              '</select>';
+
+            cell2.innerHTML = '<input type="number" step="0.01" name="amount[]" placeholder="Amount (kg)" value="">';
+        }
+    </script>
+</body>
+
+</html>

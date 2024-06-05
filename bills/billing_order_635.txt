@@ -1,0 +1,20 @@
+Date: 2024-04-23 23:03:12
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+vegetable fried rice 11.3       $308.49    
+vegetable stir-fry   17.5       $105.70    
+cucumber tomato salad 23.4       $120.51    
+veggie chili         10.0       $65.20     
+tomato basil pasta   14.1       $81.50     
+veggie fajitas       20.5       $418.61    
+pad thai             17.5       $189.53    
+bean chili           18.7       $23.00     
+overnight oats       19.7       $197.99    
+
+Total Cost:
+$1691.78
+
+Physical Address: Jacob Circle, Mumbai, Maharashtra
+Distance: 13.126 km

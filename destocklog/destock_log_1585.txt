@@ -1,0 +1,27 @@
+Date: 2024-04-27 08:33:44
+Pasta: 5.08 kg
+Bell pepper: 2.54 kg
+Onion: 1.9049999999999998 kg
+Noodles: 3.4020000000000006 kg
+Sprouts: 7.29 kg
+Peanuts: 12.15 kg
+Sauce: 14.58 kg
+Bananas: 7.859999999999999 kg
+Flour: 1.5719999999999998 kg
+Sugar: 10.48 kg
+Tuna: 2.2 kg
+Mayo: 13.2 kg
+Berries: 2.176 kg
+Biscuit_Mix: 1.36 kg
+Sugar: 5.44 kg
+Mozzarella: 11.200000000000001 kg
+Basil: 9.799999999999999 kg
+Bell_Peppers: 3.9299999999999997 kg
+Sweet potato: 10.85 kg
+Black beans: 8.68 kg
+Tomato: 6.51 kg
+Onion: 3.255 kg
+Chili powder: 0.217 kg
+Curry paste: 33.599999999999994 kg
+Potato: 3.36 kg
+Carrot: 2.2399999999999998 kg

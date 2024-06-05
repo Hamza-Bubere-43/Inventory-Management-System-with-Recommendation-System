@@ -1,0 +1,15 @@
+Date: 2024-05-06 11:58:43
+Billing Order
+
+Items:
+Item Name            Amount (kg) Cost      
+caprese salad        90.0       $1230.30   
+roasted carrot salad 76.0       $199.88    
+veggie pasta         54.0       $502.20    
+potato leek soup     34.0       $215.90    
+
+Total Cost:
+$2406.07
+
+Physical Address: Majiwada, Thane, Maharashtra
+Distance: 27.277 km

@@ -1,0 +1,11 @@
+Date: 2024-04-30 23:13:13
+Oranges: 77.39999999999999 kg
+Grapefruit: 51.6 kg
+Carrot: 94.5 kg
+Olive oil: 5.67 kg
+Salt: 1.8900000000000001 kg
+Pasta: 40.800000000000004 kg
+Tomato: 40.800000000000004 kg
+Olive oil: 3.06 kg
+Basil: 20.400000000000002 kg
+Parmesan cheese: 10.200000000000001 kg

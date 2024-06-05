@@ -1,0 +1,20 @@
+Date: 2024-04-20 11:48:50
+Sweet potato: 9.85 kg
+Black beans: 7.88 kg
+Tomato: 5.909999999999999 kg
+Onion: 2.9549999999999996 kg
+Chili powder: 0.197 kg
+Pasta: 4.16 kg
+Bell pepper: 2.08 kg
+Onion: 1.56 kg
+Berries: 2.384 kg
+Biscuit_Mix: 1.4900000000000002 kg
+Sugar: 5.960000000000001 kg
+Pasta: 1.11 kg
+Pesto: 6.659999999999999 kg
+Cherry_Tomatoes: 1.554 kg
+Tuna: 1.7000000000000002 kg
+Mayo: 10.2 kg
+Pizza_Dough: 1.836 kg
+Cream_Cheese: 9.18 kg
+Berries: 12.240000000000002 kg

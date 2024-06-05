@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Below Reorder Point</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style the GUI buttons container */
+        .gui-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style the table */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Style the form */
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Items Below Reorder Point</h1>
+
+    <!-- Display GUI buttons -->
+    <div class="gui-buttons">
+        {% include 'gui_buttons.html' %}
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Material Name</th>
+                <th>Current Amount (kg)</th>
+                <th>Reorder Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through items below reorder point -->
+            {% for item in data_below_reorder %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.current_amount_kg }}</td>
+                    <td>{{ item.reorder_point }}</td>
+                </tr>
+            {% endfor %}
+            <!-- Display empty rows dynamically based on the remaining slots -->
+            {% for _ in range(25 - len(data_below_reorder)) %}
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form method="POST" action="{{ url_for('display_items_below_reorder') }}">
+        <!-- Add any additional form fields if needed -->
+        <br>
+        <input type="submit" value="Refresh">
+    </form>
+</body>
+</html>

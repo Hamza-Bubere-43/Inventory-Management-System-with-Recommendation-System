@@ -1,0 +1,15 @@
+Date: 2024-05-11 20:41:41
+Mozzarella: 72.0 kg
+Basil: 62.99999999999999 kg
+Carrot: 38.0 kg
+Olive oil: 2.28 kg
+Salt: 0.76 kg
+Bell_Peppers: 10.8 kg
+Basil: 27.0 kg
+Olive_Oil: 43.2 kg
+Potato: 20.4 kg
+Leek: 6.800000000000001 kg
+Vegetable broth: 34.0 kg
+Olive oil: 1.02 kg
+Salt: 0.34 kg
+Black pepper: 0.34 kg

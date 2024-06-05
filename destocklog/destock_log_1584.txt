@@ -1,0 +1,31 @@
+Date: 2024-05-02 04:43:33
+Carrot: 2.2600000000000002 kg
+Egg: 67.80000000000001 kg
+Soy sauce: 1.1300000000000001 kg
+Green onion: 1.1300000000000001 kg
+Soy sauce: 0.875 kg
+Olive oil: 0.525 kg
+Bell pepper: 35.0 kg
+Carrot: 3.5 kg
+Onion: 2.625 kg
+Cucumber: 23.4 kg
+Tomato: 9.36 kg
+Red onion: 2.34 kg
+Olive oil: 0.702 kg
+Black pepper: 0.23399999999999999 kg
+Beans: 1.6 kg
+Peppers: 4.0 kg
+Spices: 2.0 kg
+Pasta: 5.640000000000001 kg
+Tomato: 5.640000000000001 kg
+Olive oil: 0.423 kg
+Basil: 2.8200000000000003 kg
+Parmesan cheese: 1.4100000000000001 kg
+Peppers: 8.200000000000001 kg
+Tortillas: 16.400000000000002 kg
+Noodles: 2.45 kg
+Sprouts: 5.25 kg
+Peanuts: 8.75 kg
+Sauce: 10.5 kg
+Milk: 3.152 kg
+Berries: 15.76 kg

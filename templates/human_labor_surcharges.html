@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Labor Surcharges</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style the table */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Style the GUI buttons container */
+        .gui-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Human Labor Surcharges</h1>
+
+    <!-- Display GUI buttons -->
+    <div class="gui-buttons">
+        {% include 'gui_buttons.html' %}
+    </div>
+
+    <table>
+        <!-- Your table structure for human_labor_surcharges -->
+        <thead>
+            <!-- Table headers -->
+            <tr>
+                {% for key in data["human_labor_surcharges"][0].keys() %}
+                    {% if key != '_id' %}
+                        <th>{{ key }}</th>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows -->
+            {% for employee in data["human_labor_surcharges"] %}
+                <tr>
+                    {% for key, value in employee.items() %}
+                        {% if key != '_id' %}
+                            <td>{{ value }}</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
